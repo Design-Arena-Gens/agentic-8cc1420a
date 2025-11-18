@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  --background: #040313;
+  --foreground: #f5f6ff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #020111;
+    --foreground: #f7f8ff;
+  }
+}
+
+body {
+  min-height: 100dvh;
+  background: radial-gradient(circle at top left, #0f172a, transparent 45%),
+    radial-gradient(circle at bottom right, #312e81, transparent 35%),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
